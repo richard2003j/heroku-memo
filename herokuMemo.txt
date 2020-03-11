@@ -1,0 +1,82 @@
+#1 IPを調べる
+https://h-contact.herokuapp.com/
+Add-on　QuotaGuard Static
+ Ec2を作成し、Herokuにつながる
+
+In Browser, you can access the ec2 directly
+sudo yum -y install httpd
+sudo service httpd start
+
+test if you can access the web service
+
+#Install heroku
+
+$ wget https://cli-assets.heroku.com/branches/stable/heroku-linux-amd64.tar.gz
+$ tar xf heroku-linux-amd64.tar.gz
+$ sed -i -e "/^export PATH$/i PATH=\$HOME/heroku/bin:\$PATH" ~/.bash_profile
+$ export PATH=$HOME/heroku-client/bin:$PATH
+
+#install node.js
+
+$ sudo yum update
+$ sudo yum -y install gcc-c++
+$ sudo yum -y install git
+$ git clone https://github.com/creationix/nvm.git ~/.nvm
+$ source ~/.nvm/nvm.sh
+$ vi .bash_profile
+ add the below source
+ # nvm
+ if [[ -s ~/.nvm/nvm.sh ]] ; then
+        source ~/.nvm/nvm.sh ;
+ fi
+  
+  #relogin
+ 
+ $ nvm ls-remote
+ #select the latest version
+ $ nvm install 12.16.1
+ $ nvm use v12.16.1
+ $ node -v
+ 
+ 
+ #heroku login
+ $ heroku login -i
+ #git
+ $ git clone https://github.com/richard_2003j/heroku-connect-phone-change
+  
+ $ heroku create
+Creating app... done, ⬢ damp-beach-49350
+https://damp-beach-49350.herokuapp.com/ | https://git.heroku.com/damp-beach-49350.git
+
+#deploy
+git push heroku master
+
+# browser
+https://damp-beach-49350.herokuapp.com/
+
+----------------------------
+#heroku login
+#set Resources provision the follow
+
+Heroku Postgres
+Heroku Connect
+
+#mapping postgres to salesforce contact
+Check　双方コピー
+
+#IP範囲
+h-contact.herokuapp.com (34.192.12.194) 
+damp-beach-49350.herokuapp.com (52.202.112.181) 
+damp-beach-49350.herokuapp.com (52.22.242.39)
+
+※Heroku ConnectのIpは下記です。WhiteListに追加は必須です。
+Virginia (US)	52.201.85.23, 52.201.89.242, 52.71.226.41, 52.201.69.94
+Virginia-2 (US)	3.210.174.175, 3.210.168.103, 52.205.195.161, 54.163.146.74
+Tokyo	52.193.240.226, 52.68.146.69, 52.196.222.211, 52.196.223.90
+
+
+
+
+
+
+
