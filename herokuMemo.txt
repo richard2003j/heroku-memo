@@ -108,6 +108,17 @@ npm start
 in browser http://localhost:5000
 
 
+#salesforce
+admin@hitachi.com.4gtmi.demo.dev02/hitachi1
+testuser8@hitachi.com.4gtmi.demo.dev02 /hitachi8
+jpx.hisol.test2+testuser8-dev02@gmail.com
+
+
+https://mail.google.com/mail/?tab=wm&authuser=2&ogbl
+jpx.hisol.test2@gmail.com
+hitachi1@
+
+
 
 　　　　
 
