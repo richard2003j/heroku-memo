@@ -1,0 +1,28 @@
+mkdir testgithub
+cd testgithub
+git clone https://github.com/richard2003j/heroku-memo
+
+git config --global user.name richard2003j
+git config --global user.mail richard_2003jp@yahoo.co.jp
+
+#cd home/user
+#edit .netrc write into it as below
+
+machine github.com
+  login richard_2003jp@yahoo.co.jp
+  password hu691125
+
+
+#edit file and commit it
+git status
+git add file
+git commit file -m "xxx"
+git push
+
+
+meeting moring 10:30
+・シナリオパターン　シナリオ１　完了
+・リハーが２回
+　Refreshが３回
+
+・
