@@ -20,9 +20,84 @@ git commit file -m "xxx"
 git push
 
 
-meeting moring 10:30
-・シナリオパターン　シナリオ１　完了
-・リハーが２回
-　Refreshが３回
+#　Heroku toolbelt
+$ curl -OL https://cli-assets.heroku.com/heroku-linux-x64.tar.gz
+tar zxf heroku-linux-x64.tar.gz && rm -f heroku-linux-x64.tar.gz
+sudo mv heroku /usr/local
+echo 'PATH=/usr/local/heroku/bin:$PATH' >> $HOME/.bash_prof
+source $HOME/.bash_profile > /dev/null
+
+heroku --version
+
+# Heroku login
+heroku login -i
+
+#add heroku remote
+heroku git:remote --app damp-beach-49350
+
+#modify remote netrc
+machine github.com
+  login richard2003j
+  password hu691125
+machine git.heroku.com
+  login richard_2003jp@yahoo.co.jp
+  password sony#1201
+  
+#if you modify the source, you can commit to heroku
+   git push heroku master
+#or commit to github
+   git push 
+   
+
+
+#logs
+heroku logs --app damp-beach-49350
+
+#DB postgres install localy
+sudo yum install postgresql-server postgresql-devel postg
+which psql
+
+#connect heroku postgresql
+heroku config:get DATABASE_URL --app damp-beach-49350
+$ heroku pg:psql DATABASE_URL --app damp-beach-49350
+List tables in the connect schema:
+# \dt salesforce.*;
+Query from a table:
+# select * from salesforce.account;
+Set the search path:
+ set search_path=salesforce, public;
+# Show the list of all schemas:
+# \dn
+
+# exit
+\q;
+
+#run nodejs locally  NG for connect db
+sudo passwd postgres
+ -- give password
+ su postgres
+ #cd /etc/init.d
+ sudo ./postgresql initdb
+ 
+#add trust list
+su postgres
+  # password
+cd /var/lib/pgsql9/data
+sudo vi pg_hba.conf
+# add 
+host    all             all             18.176.52.156/32            trust
+
+sudo service postgresql restart
+su postgres
+psql
+
+
+
+ 
+ 
+ 18.176.52.156
+
+npm start
+
 
 ・
