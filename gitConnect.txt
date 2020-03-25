@@ -8,6 +8,12 @@ git config --global user.mail richard_2003jp@yahoo.co.jp
 #cd home/user
 #edit .netrc write into it as below
 
+#set remote master
+git remote add origin https://github.com/user/repo.git
+git remote -v  #list infor
+git push -u origin master
+
+
 machine github.com
   login richard_2003jp@yahoo.co.jp
   password hu691125
